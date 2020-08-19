@@ -1,0 +1,78 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+nav{    
+    position: relative;
+}
+
+nav ul{
+    right:0;
+    display:flex;
+    justify-content: flex-end;
+}
+
+nav ul li{
+    margin: 15px;
+}
+
+li img{
+    width: 35px;
+}
+
+main{
+    
+    max-width: 700px;
+    margin: 0 auto;     
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(4,70px );
+    grid-template-areas: 
+    "img img"
+    "search search"
+    "button1 button2"
+    "lang lang";
+    grid-gap:30px;
+}
+
+#google-logo{
+    grid-area: img;
+    justify-self:center;
+}
+
+main input{
+    grid-area: search;  
+    justify-self: center; 
+    border-radius: 35px;
+    border: 1px solid gray;
+    width:500px; 
+}
+
+main button{
+    max-width: 200px;
+    border:none;
+    border-radius: 10px;
+    background-color:gainsboro;
+    color: gray;
+}
+
+#button1{
+    grid-area: button1;
+    justify-self: end;    
+}
+
+#button2{
+    grid-area: button2;
+    justify-self: start;
+}
+
+main p {
+    grid-area:lang;
+    justify-self: center;
+    align-self: start;
+}
+
+footer{
+    display :grid;   
+}
