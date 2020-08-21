@@ -1,6 +1,7 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 nav{    
@@ -22,9 +23,9 @@ li img{
 }
 
 main{
-    
     max-width: 700px;
     margin: 0 auto;     
+    padding: 15vh;
     display:grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: repeat(4,70px );
@@ -34,6 +35,13 @@ main{
     "button1 button2"
     "lang lang";
     grid-gap:30px;
+}
+a{
+    text-decoration: none;
+    font-size: .9rem;
+    color: gray;
+    font-size: .9em;
+
 }
 
 #google-logo{
@@ -45,16 +53,19 @@ main input{
     grid-area: search;  
     justify-self: center; 
     border-radius: 35px;
-    border: 1px solid gray;
-    width:500px; 
+    border: 1px solid #c6c6c6;
+    width:97%; 
+    height: 50px;
+    margin:15px;
 }
 
-main button{
+ button{
     max-width: 200px;
     border:none;
     border-radius: 10px;
     background-color:gainsboro;
     color: gray;
+    padding:0 1em;
 }
 
 #button1{
@@ -73,6 +84,39 @@ main p {
     align-self: start;
 }
 
-footer{
-    display :grid;   
+main p a{
+    color: #0032ff;
+}
+
+footer{    
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+    display:flex;
+    flex-direction: column;
+}
+
+.row{
+    background-color: gainsboro;
+    border: 0.1px solid grey;
+    color: gray;
+}
+
+.row-1, .row-2 ul li{
+    padding: 1em 0.5em;
+   
+}
+
+.row-2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-2 ul{
+    display:flex; 
+}
+
+#searchbar:hover{
+    box-shadow: 1px 1px 2px 2px grey;
 }
